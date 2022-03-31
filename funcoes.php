@@ -2,9 +2,9 @@
 
 function cadastraAluno(array $aluno):bool
 {
-    $f = fopen('alunos.csv', 'a');
-    $escreveu = fwrite($f, "{$aluno['matricula']};\"{$aluno['nome']}\"\n");
-    fclose($f);
+    $f = fopen('alunos.csv', 'a'); //
+    $escreveu = fwrite($f, "{$aluno['matricula']};\"{$aluno['nome']}\"\n"); //
+    fclose($f); //
 
     if($escreveu){
         return true;
