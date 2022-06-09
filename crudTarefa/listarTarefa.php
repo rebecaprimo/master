@@ -22,7 +22,7 @@ while($reg = $stmt->fetch(PDO::FETCH_ASSOC)){
     $img = 'N/D';    
 
     if(!empty($reg['imagem'])){
-        if(is_file($reg['imagem'])){
+        if(is_file($reg['imagem'])){//Informa se o arquivo é um arquivo comum
                 $img = "<img src='{$reg['imagem']}' width='50' height='50'>";
         }
     }    

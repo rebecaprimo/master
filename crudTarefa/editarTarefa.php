@@ -12,9 +12,9 @@ if(isset($_POST['tarefa'])){
     if($_FILES['figura']['error'] == 0 &&
         $_FILES['figura']['size'] > 0){
     
-        $mimeType = mime_content_type($_FILES['figura']['tmp_name']);
+        $mimeType = mime_content_type($_FILES['figura']['tmp_name']);//Detecta o tipo MIME de um arquivo
     
-        $campos = explode('/', $mimeType);
+        $campos = explode('/', $mimeType);//Divide uma string em strings
         $tipo = $campos[0];
         $ext = $campos[1];
     
@@ -50,7 +50,7 @@ $tarefa = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $img = 'N/D';
 
-if(!empty($tarefa['imagem'])){
+if(!empty($tarefa['imagem'])){//determina se a variável é vazia, nesse caso não
     if(is_file($tarefa['imagem'])){
         $img = "<img src='{$tarefa['imagem']}' width='50' heigth='50'>";
     }

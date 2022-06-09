@@ -18,10 +18,10 @@ if($_FILES['figura']['error'] == 0 &&
     if($tipo == 'image'){
 
         $arquivoEnviado = 'imagens/' . $_FILES['figura']['name'] 
-                . '_' . md5(rand(-9999999, 9999999) . microtime()) 
+                . '_' . md5(rand(-9999999, 9999999) . microtime())//Calcula o "hash MD5" de uma string
                     . '.' . $ext;
 
-        move_uploaded_file($_FILES['figura']['tmp_name'], "$arquivoEnviado");
+        move_uploaded_file($_FILES['figura']['tmp_name'], "$arquivoEnviado");//
     }else{
         echo "Arquivo ignorado por não se tratar de um arquivo de imagem<br>";
     }
