@@ -1,7 +1,7 @@
 <?php
 require_once '../../crudTarefa/conexao.php';
 
-$metodo = $_SERVER['REQUEST_METHOD'];
+$metodo = $_SERVER['REQUEST_METHOD'];//Informação do servidor e ambiente de execução
 
 //Se o requisitante usar o método GET
 if($metodo == 'GET'){
@@ -23,7 +23,7 @@ if($metodo == 'GET'){
 
         if($registro['apagado'] != 0){
 
-            if( isset($_GET['id']) ) exit(http_response_code(204));
+            if(isset($_GET['id']) ) exit(http_response_code(204));//Obtenhe ou define o código de resposta HTTP
 
             continue;
         }
