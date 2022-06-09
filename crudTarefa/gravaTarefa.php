@@ -7,7 +7,7 @@ $tarefa = $_POST['tarefa'];//Dado inseguro
 if($_FILES['figura']['error'] == 0 &&
     $_FILES['figura']['size'] > 0){
 
-    move_uploaded_file($_FILES['figura']['tmp_name'],
+    move_uploaded_file($_FILES['figura']['tmp_name'],//Move um arquivo enviado para uma nova localização
                         "imagens/{$_FILES['figura']['name']}");
 }
 
