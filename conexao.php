@@ -1,7 +1,7 @@
 <?php
 
 //conecta no banco de dados
-$dsn = 'mysql:dbname=php;host=localhost';
+$dsn = 'mysql:dbname=php;host=localhost';//definindo o nome do bd e host
 $user = 'root';
 $pass = '';
 

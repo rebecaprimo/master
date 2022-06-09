@@ -20,8 +20,8 @@ function listarAlunos():array
 
     $f = fopen('alunos.csv', 'r');
 
-    while($linha = fgets($f)){
-        var_dump($linha);
+    while($linha = fgets($f)){//fgets = Retorna uma linha do arquivo.
+        var_dump($linha);//Mostra informações sobre a variável, printa possíveis erros.
         echo "<br>";
     }
 

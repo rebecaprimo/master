@@ -72,7 +72,7 @@ $dias = ['DOM' => ['domingo','domingo'],
         'SEX' => ['sexta','sexta-feira'],
         'SAB' => ['sábado','sábado']];
 
-foreach($dias as $abreviacao => $nomes){
+foreach($dias as $abreviacao => $nomes){//maneira fácil de iterar sobre arrays, percorre arrays
     echo "$abreviacao: {$nomes[0]} ou {$nomes[1]}<br>";
 }
 
