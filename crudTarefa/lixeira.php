@@ -5,7 +5,7 @@ require_once 'conexao.php';
 //Apagar para sempre ou restaurar
 if(isset($_POST['id'])){
 
-    $id = preg_replace('/\D/', '', $_POST['id']);
+    $id = preg_replace('/\D/', '', $_POST['id']);//Executa uma pesquisa de expressão regular e substitui
 
     if($_GET['a'] == 'r'){//Restaura
 
